@@ -1,0 +1,34 @@
+{
+  "experiment": "Pilot cost/quality optimization -- configuration test only, NOT scientific evidence",
+  "model_id": "gpt-5.5-2026-04-23",
+  "pilot_accessions": ["Q86YC3", "P62301", "P07347", "P76347"],
+  "pilot_accession_organisms": {"Q86YC3": "human", "P62301": "mouse", "P07347": "yeast", "P76347": "ecoli"},
+  "selection_seed": 42,
+  "selection_method": "random.Random(42).shuffle() on sorted per-organism accession lists; not based on any prior OpenAI result",
+  "configurations_tested": ["A: reasoning_effort=low, max_completion_tokens=4000, Batch", "B: reasoning_effort=medium, max_completion_tokens=4000, Batch"],
+  "calls_per_config": 48,
+  "calls_total_pilot": 96,
+  "batch_ids": {
+    "feasibility_test": "batch_6ac74f797464819082f22045cbcfb961",
+    "config_A": "batch_6ac750a2ab708190afa872812c9dda08",
+    "config_B": "batch_6ac750a49d508190abae86d7abddff99"
+  },
+  "success_failure": {
+    "config_A": {"successful_api_calls": 48, "failed_api_calls": 0, "truncated_empty_scientific_responses": 0},
+    "config_B": {"successful_api_calls": 48, "failed_api_calls": 0, "truncated_empty_scientific_responses": 1}
+  },
+  "previous_full_run_status": "ARCHIVED, UNTOUCHED -- ../raw/gpt-5.5-2026-04-23.jsonl and all associated analysis files were not modified, merged, or re-used as evidence in this pilot",
+  "frozen_primary_experiment_status": "UNTOUCHED -- no files under ../.. /FROZEN_PROTOCOL.md, frozen_experiment_config.json, scripts/heldout_sample_250.json, or heldout_results/ were modified",
+  "n_models_check": "GPT-5.5 was not added to the 5-model n_models calculation at any point",
+  "prompt_source": "../../scripts/llm_prompting_heldout.py::build_prompts(), imported unmodified",
+  "pricing_source": "WebSearch cross-referencing apidog.com, promptcost.org, benchlm.ai, metacto.com (OpenAI's own pricing page returned HTTP 403 to direct WebFetch)",
+  "timestamps": {
+    "feasibility_batch_submitted_completed": "~3 minutes turnaround",
+    "pilot_batches_submitted_completed": "both completed within the same polling session"
+  },
+  "random_seed": 42,
+  "evaluation_code": ["submit_pilot_batch.py", "analyze_pilot.py"],
+  "deviations": [
+    "None from this pilot's own stated design. Configuration B's 1/48 truncated-empty response is a documented finding, not a deviation from protocol."
+  ]
+}

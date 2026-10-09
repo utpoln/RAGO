@@ -1,0 +1,13 @@
+{
+  "raw_lines": 2916,
+  "n_success": 2914,
+  "n_fail": 2,
+  "unique_successful_keys": 2914,
+  "missing_keys": 2,
+  "extra_keys": 0,
+  "p5_present": false,
+  "proteins_with_wrong_call_count": 2,
+  "zero_claim_calls": 2855,
+  "openai_distinct_claims": 100,
+  "frozen_claim_set_size_readonly": 60585
+}

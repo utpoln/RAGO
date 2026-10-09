@@ -1,0 +1,18 @@
+Loading dataset from ../heldout_benchmark_243.json ...
+Total proteins     : 243
+Models to run      : 1  ['mistral-large:123b']
+Prompts per protein: 4 (P1-P4; P5 does not exist in this script)
+Namespaces         : 3
+Total API calls    : 2,916
+
+
+============================================================
+Model: mistral-large:123b
+Output: ../heldout_results/mistral-large-123b.jsonl
+Thinking mode: NO  |  max_tokens=512
+Already completed: 2,907 calls
+============================================================
+mistral-large-123b:   0%|          | 0/243 [00:00<?, ?it/s]mistral-large-123b:  49%|████▉     | 119/243 [00:22<00:23,  5.27it/s]mistral-large-123b:  49%|████▉     | 120/243 [02:22<03:18,  1.61s/it]mistral-large-123b: 100%|██████████| 243/243 [02:22<00:00,  1.70it/s]
+
+Prompting complete!
+   Results saved in: ../heldout_results/

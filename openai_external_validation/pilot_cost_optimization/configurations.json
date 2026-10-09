@@ -1,0 +1,39 @@
+{
+  "model_id": "gpt-5.5-2026-04-23",
+  "model_id_confirmed_via": "response.body.model field in every batch output record, verified identical to the requested id",
+  "configurations": {
+    "A": {
+      "label": "reasoning_effort=low, max_completion_tokens=4000, Batch API, seed=42",
+      "batch_id": "batch_6ac750a2ab708190afa872812c9dda08",
+      "input_file_id": "file-KreEXaEeA9kZgnJXdvzLAX",
+      "output_file_id": "file-XL7iDSAJw92iwQnRcekCa7"
+    },
+    "B": {
+      "label": "reasoning_effort=medium, max_completion_tokens=4000, Batch API, seed=42",
+      "batch_id": "batch_6ac750a49d508190abae86d7abddff99",
+      "input_file_id": "file-D8QibRFconysB5V3xZK7o9",
+      "output_file_id": "file-R9cAsfhcBkgQXCGor6UfEj"
+    }
+  },
+  "prompts": {
+    "source": "../../scripts/llm_prompting_heldout.py::build_prompts()",
+    "reuse_method": "imported directly, not retyped, not restructured for caching",
+    "namespace_specific": true,
+    "prompt_ids": ["P1_zeroshot", "P2_constrained", "P3_fewshot", "P4_cot"]
+  },
+  "pilot_sample": "pilot_sample.json (4 proteins, 1 per organism, seed=42, selected before any OpenAI call existed for this pilot)",
+  "calls_per_config": 48,
+  "batch_api_feasibility": {
+    "tested": true,
+    "feasibility_batch_id": "batch_6ac74f797464819082f22045cbcfb961",
+    "result": "SUPPORTED -- completed in ~3 minutes for a 2-request test batch with this exact model+reasoning_effort+max_completion_tokens combination before the real 48-call pilot batches were submitted"
+  },
+  "prompt_caching": {
+    "tested": true,
+    "result": "NOT ENGAGED in either configuration -- cached_tokens=0 for all 96 pilot calls combined. Root cause: prompt lengths (mean 265 tokens, all well under OpenAI's ~1024-token minimum for caching to activate at all) are too short for caching to apply, regardless of repeated identical structure. This is a property of the (unmodified) frozen prompt construction, not a configuration mistake -- reported as a limitation, not solved by altering the scientific prompt content."
+  },
+  "reasoning_effort_support": {
+    "tested": true,
+    "result": "SUPPORTED -- both 'low' and 'medium' accepted by the API without error, confirmed on both a trivial probe and a real scientific prompt before committing to the 48-call batches."
+  }
+}

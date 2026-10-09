@@ -1,0 +1,24 @@
+Pilot manifest saved BEFORE any API call: /Users/kallolnaha/Documents/mix_projects/mindrouter/RAGO/openai_external_validation/production/logs/pilot500_manifest.json
+Selected 500 requests, first=A0JLT2|biological_process|P1_zeroshot, last=P11678|cellular_component|P4_cot
+[pilot500] submitted batch batch_6ac7fb46ab008190b5d5f5693ca3115f with 500 requests
+[pilot500] poll 0: status=validating counts=BatchRequestCounts(completed=0, failed=0, total=0)
+[pilot500] poll 1: status=validating counts=BatchRequestCounts(completed=0, failed=0, total=0)
+[pilot500] poll 2: status=validating counts=BatchRequestCounts(completed=0, failed=0, total=0)
+[pilot500] poll 3: status=validating counts=BatchRequestCounts(completed=0, failed=0, total=0)
+[pilot500] poll 4: status=in_progress counts=BatchRequestCounts(completed=0, failed=0, total=500)
+[pilot500] poll 5: status=in_progress counts=BatchRequestCounts(completed=0, failed=0, total=500)
+[pilot500] poll 6: status=in_progress counts=BatchRequestCounts(completed=0, failed=0, total=500)
+[pilot500] poll 7: status=in_progress counts=BatchRequestCounts(completed=0, failed=0, total=500)
+[pilot500] poll 8: status=in_progress counts=BatchRequestCounts(completed=0, failed=0, total=500)
+[pilot500] poll 9: status=in_progress counts=BatchRequestCounts(completed=0, failed=0, total=500)
+[pilot500] poll 10: status=in_progress counts=BatchRequestCounts(completed=86, failed=0, total=500)
+[pilot500] poll 11: status=in_progress counts=BatchRequestCounts(completed=236, failed=0, total=500)
+[pilot500] poll 12: status=in_progress counts=BatchRequestCounts(completed=416, failed=0, total=500)
+[pilot500] poll 13: status=in_progress counts=BatchRequestCounts(completed=450, failed=0, total=500)
+[pilot500] poll 14: status=in_progress counts=BatchRequestCounts(completed=480, failed=0, total=500)
+[pilot500] poll 15: status=in_progress counts=BatchRequestCounts(completed=480, failed=0, total=500)
+[pilot500] poll 16: status=in_progress counts=BatchRequestCounts(completed=480, failed=0, total=500)
+[pilot500] poll 17: status=in_progress counts=BatchRequestCounts(completed=480, failed=0, total=500)
+[pilot500] poll 18: status=finalizing counts=BatchRequestCounts(completed=500, failed=0, total=500)
+[pilot500] poll 19: status=completed counts=BatchRequestCounts(completed=500, failed=0, total=500)
+Appended 500 records to /Users/kallolnaha/Documents/mix_projects/mindrouter/RAGO/openai_external_validation/production/raw/production_master_output.jsonl

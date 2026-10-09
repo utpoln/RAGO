@@ -1,0 +1,50 @@
+[
+  {
+    "n": 300,
+    "n_no_retrieval": 26,
+    "pct_no_retrieval": 8.7,
+    "precision": 0.2933,
+    "recall": 0.3575,
+    "f1": 0.2801,
+    "hr": 33.8,
+    "err": 12.3,
+    "f1_molecular_function": 0.3113,
+    "f1_biological_process": 0.1843,
+    "f1_cellular_component": 0.3449,
+    "model": "Llama 3.3 70B",
+    "probe_p5_f1": 0.095,
+    "delta_vs_p5": 0.1851
+  },
+  {
+    "n": 300,
+    "n_no_retrieval": 26,
+    "pct_no_retrieval": 8.7,
+    "precision": 0.3162,
+    "recall": 0.3174,
+    "f1": 0.2698,
+    "hr": 30.4,
+    "err": 12.7,
+    "f1_molecular_function": 0.2864,
+    "f1_biological_process": 0.1729,
+    "f1_cellular_component": 0.35,
+    "model": "Mistral Large 123B",
+    "probe_p5_f1": 0.099,
+    "delta_vs_p5": 0.1708
+  },
+  {
+    "n": 300,
+    "n_no_retrieval": 26,
+    "pct_no_retrieval": 8.7,
+    "precision": 0.2641,
+    "recall": 0.3535,
+    "f1": 0.2563,
+    "hr": 38.8,
+    "err": 9.7,
+    "f1_molecular_function": 0.2746,
+    "f1_biological_process": 0.1741,
+    "f1_cellular_component": 0.3201,
+    "model": "Gemma3 12B",
+    "probe_p5_f1": 0.075,
+    "delta_vs_p5": 0.1813
+  }
+]

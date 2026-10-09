@@ -1,0 +1,49 @@
+{
+  "pricing_note": "Pricing figures: GPT-5.5 standard rates $5.00/M input, $0.50/M cached input, $30.00/M output. Confirmed via WebSearch (openai.com/api/pricing returned HTTP 403 to direct WebFetch in this session) against multiple independent third-party pricing aggregators (apidog.com, promptcost.org, benchlm.ai, metacto.com) that converge on identical figures as of Oct 2026 -- not fetched directly from OpenAI's own page, flagged as a secondary-source confirmation. Batch API cuts ALL rates by 50% per these same sources (not independently verified against actual billing data from this session, since the Batch object's usage field reports token counts, not dollars).",
+  "configs": {
+    "A": {
+      "n": 48,
+      "empty": 0,
+      "truncated": 0,
+      "go_bearing": 48,
+      "zero_go_nonempty": 0,
+      "go_terms_mean": 3.2708333333333335,
+      "go_terms_median": 3.0,
+      "go_terms_min": 1,
+      "go_terms_max": 8,
+      "input_tokens_mean": 265.1666666666667,
+      "cached_tokens_mean": 0.0,
+      "reasoning_tokens_mean": 454.3333333333333,
+      "reasoning_tokens_median": 495.5,
+      "reasoning_tokens_max": 980,
+      "output_tokens_mean": 501.0208333333333,
+      "actual_cost_standard": 0.7851100000000001,
+      "actual_cost_batch_discount_assumed": 0.39255500000000004,
+      "projected_2916_standard": 47.6954325,
+      "projected_2916_batch_discount_assumed": 23.84771625,
+      "projected_2916_conservative": 93.62061
+    },
+    "B": {
+      "n": 48,
+      "empty": 1,
+      "truncated": 1,
+      "go_bearing": 47,
+      "zero_go_nonempty": 0,
+      "go_terms_mean": 3.2708333333333335,
+      "go_terms_median": 3.0,
+      "go_terms_min": 0,
+      "go_terms_max": 8,
+      "input_tokens_mean": 265.1666666666667,
+      "cached_tokens_mean": 0.0,
+      "reasoning_tokens_mean": 1172.3125,
+      "reasoning_tokens_median": 512.0,
+      "reasoning_tokens_max": 4000,
+      "output_tokens_mean": 1225.4791666666667,
+      "actual_cost_standard": 1.82833,
+      "actual_cost_batch_discount_assumed": 0.914165,
+      "projected_2916_standard": 111.0710475,
+      "projected_2916_batch_discount_assumed": 55.53552375,
+      "projected_2916_conservative": 358.42257
+    }
+  }
+}

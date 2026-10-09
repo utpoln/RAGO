@@ -1,0 +1,18 @@
+Loading dataset from ../heldout_benchmark_243.json ...
+Total proteins     : 243
+Models to run      : 1  ['qwen2.5:72b']
+Prompts per protein: 4 (P1-P4; P5 does not exist in this script)
+Namespaces         : 3
+Total API calls    : 2,916
+
+
+============================================================
+Model: qwen2.5:72b
+Output: ../heldout_results/qwen2.5-72b.jsonl
+Thinking mode: NO  |  max_tokens=512
+Already completed: 2,907 calls
+============================================================
+qwen2.5-72b:   0%|          | 0/243 [00:00<?, ?it/s]qwen2.5-72b:  45%|████▍     | 109/243 [01:29<01:50,  1.22it/s]qwen2.5-72b:  45%|████▌     | 110/243 [03:46<05:43,  2.58s/it]qwen2.5-72b: 100%|██████████| 243/243 [03:46<00:00,  1.07it/s]
+
+Prompting complete!
+   Results saved in: ../heldout_results/

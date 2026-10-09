@@ -1,0 +1,163 @@
+{
+  "seed": 42,
+  "selection_method": "random.Random(42).shuffle() on sorted per-organism accession lists from heldout_sample_250.json; first element of each shuffle taken -- NOT based on any prior OpenAI result",
+  "pilot_accessions_by_organism": {
+    "human": "Q86YC3",
+    "mouse": "P62301",
+    "yeast": "P07347",
+    "ecoli": "P76347"
+  },
+  "pilot_protein_records": [
+    {
+      "accession": "Q86YC3",
+      "organism": "human",
+      "organism_full": "Homo sapiens",
+      "gene_name": "NRROS",
+      "protein_name": "Transforming growth factor beta activator LRRC33",
+      "function_text": "Key regulator of transforming growth factor beta-1 (TGFB1) specifically required for microglia function in the nervous system (By similarity). Required for activation of latent TGF-beta-1 in macrophages and microglia: associates specifically via disulfide bonds with the Latency-associated peptide (LAP), which is the regulatory chain of TGFB1, and regulates integrin-dependent activation of TGF-beta-1 (By similarity). TGF-beta-1 activation mediated by LRRC33/NRROS is highly localized: there is little spreading of TGF-beta-1 activated from one microglial cell to neighboring microglia, suggesting the existence of localized and selective activation of TGF-beta-1 by LRRC33/NRROS (By similarity). Indirectly plays a role in Toll-like receptor (TLR) signaling: ability to inhibit TLR-mediated NF-kappa-B activation and cytokine production is probably a consequence of its role in TGF-beta-1 signaling (PubMed:23545260)",
+      "sequence_length": 692,
+      "n_exp_go_mf": 1,
+      "n_exp_go_bp": 0,
+      "n_exp_go_cc": 3,
+      "n_exp_go_total": 4,
+      "go_terms": {
+        "MF": [
+          {
+            "go_id": "GO:0050431",
+            "term_name": "transforming growth factor beta binding",
+            "evidence": "IPI"
+          }
+        ],
+        "BP": [],
+        "CC": [
+          {
+            "go_id": "GO:0009986",
+            "term_name": "cell surface",
+            "evidence": "IDA"
+          },
+          {
+            "go_id": "GO:0005789",
+            "term_name": "endoplasmic reticulum membrane",
+            "evidence": "EXP"
+          },
+          {
+            "go_id": "GO:0005886",
+            "term_name": "plasma membrane",
+            "evidence": "EXP"
+          }
+        ]
+      }
+    },
+    {
+      "accession": "P62301",
+      "organism": "mouse",
+      "organism_full": "Mus musculus",
+      "gene_name": "Rps13",
+      "protein_name": "Small ribosomal subunit protein uS15",
+      "function_text": "Component of the small ribosomal subunit (PubMed:36517592). The ribosome is a large ribonucleoprotein complex responsible for the synthesis of proteins in the cell (PubMed:36517592). Part of the small subunit (SSU) processome, first precursor of the small eukaryotic ribosomal subunit. During the assembly of the SSU processome in the nucleolus, many ribosome biogenesis factors, an RNA chaperone and ribosomal proteins associate with the nascent pre-rRNA and work in concert to generate RNA folding, modifications, rearrangements and cleavage as well as targeted degradation of pre-ribosomal RNA by the RNA exosome (By similarity)",
+      "sequence_length": 151,
+      "n_exp_go_mf": 1,
+      "n_exp_go_bp": 0,
+      "n_exp_go_cc": 2,
+      "n_exp_go_total": 3,
+      "go_terms": {
+        "MF": [
+          {
+            "go_id": "GO:0003735",
+            "term_name": "structural constituent of ribosome",
+            "evidence": "IDA"
+          }
+        ],
+        "BP": [],
+        "CC": [
+          {
+            "go_id": "GO:0005737",
+            "term_name": "cytoplasm",
+            "evidence": "EXP"
+          },
+          {
+            "go_id": "GO:0022627",
+            "term_name": "cytosolic small ribosomal subunit",
+            "evidence": "IDA"
+          }
+        ]
+      }
+    },
+    {
+      "accession": "P07347",
+      "organism": "yeast",
+      "organism_full": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "gene_name": "ARD1",
+      "protein_name": "N-terminal acetyltransferase A complex catalytic subunit ARD1",
+      "function_text": "Catalytic component of the NatA N-terminal acetyltransferase, which catalyzes acetylation of proteins beginning with Met-Ser, Met-Gly and Met-Ala. N-acetylation plays a role in normal eukaryotic translation and processing, protect against proteolytic degradation and protein turnover",
+      "sequence_length": 238,
+      "n_exp_go_mf": 1,
+      "n_exp_go_bp": 2,
+      "n_exp_go_cc": 1,
+      "n_exp_go_total": 4,
+      "go_terms": {
+        "MF": [
+          {
+            "go_id": "GO:0042802",
+            "term_name": "identical protein binding",
+            "evidence": "IPI"
+          }
+        ],
+        "BP": [
+          {
+            "go_id": "GO:0006474",
+            "term_name": "N-terminal protein amino acid acetylation",
+            "evidence": "IDA"
+          },
+          {
+            "go_id": "GO:0061606",
+            "term_name": "N-terminal protein amino acid propionylation",
+            "evidence": "IMP"
+          }
+        ],
+        "CC": [
+          {
+            "go_id": "GO:0031415",
+            "term_name": "NatA complex",
+            "evidence": "IDA"
+          }
+        ]
+      }
+    },
+    {
+      "accession": "P76347",
+      "organism": "ecoli",
+      "organism_full": "Escherichia coli (strain K12)",
+      "gene_name": "yeeJ",
+      "protein_name": "Inverse autotransporter adhesin YeeJ",
+      "function_text": "A cryptic inverse autotransporter, it is not expressed in wild-type strain MG1655 (PubMed:28900103). Upon overexpression shows increased adherence to polyvinyl chloride (PVC) plates and increased mature biofilm formation (PubMed:15659678, PubMed:28900103). Probably binds peptidoglycan (PubMed:28900103)",
+      "sequence_length": 2339,
+      "n_exp_go_mf": 0,
+      "n_exp_go_bp": 2,
+      "n_exp_go_cc": 1,
+      "n_exp_go_total": 3,
+      "go_terms": {
+        "MF": [],
+        "BP": [
+          {
+            "go_id": "GO:0043708",
+            "term_name": "cell adhesion involved in biofilm formation",
+            "evidence": "IMP"
+          },
+          {
+            "go_id": "GO:0043709",
+            "term_name": "cell adhesion involved in single-species biofilm formation",
+            "evidence": "IDA"
+          }
+        ],
+        "CC": [
+          {
+            "go_id": "GO:0009279",
+            "term_name": "cell outer membrane",
+            "evidence": "EXP"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "O60393|cellular_component|GO:0005654": [
+    "P3_fewshot"
+  ],
+  "O60393|cellular_component|GO:0000785": [
+    "P3_fewshot"
+  ],
+  "O60393|cellular_component|GO:0005634": [
+    "P3_fewshot"
+  ],
+  "Q6NVY1|cellular_component|GO:0005759": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "Q6NVY1|cellular_component|GO:0005739": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "O43316|cellular_component|GO:0005654": [
+    "P3_fewshot"
+  ],
+  "O43316|cellular_component|GO:0000785": [
+    "P3_fewshot"
+  ],
+  "O43316|cellular_component|GO:0005634": [
+    "P3_fewshot"
+  ],
+  "A0JLT2|cellular_component|GO:0016592": [
+    "P4_cot"
+  ],
+  "A0JLT2|cellular_component|GO:0005654": [
+    "P4_cot"
+  ],
+  "A0JLT2|cellular_component|GO:0005634": [
+    "P4_cot"
+  ],
+  "Q0P5N6|molecular_function|GO:0003924": [
+    "P1_zeroshot"
+  ],
+  "Q0P5N6|molecular_function|GO:0005525": [
+    "P1_zeroshot"
+  ],
+  "P17509|molecular_function|GO:0000981": [
+    "P3_fewshot"
+  ],
+  "P17509|molecular_function|GO:0005515": [
+    "P3_fewshot"
+  ],
+  "P17509|molecular_function|GO:0043565": [
+    "P3_fewshot"
+  ],
+  "P17509|molecular_function|GO:0003700": [
+    "P3_fewshot"
+  ],
+  "P17509|molecular_function|GO:0003677": [
+    "P3_fewshot"
+  ],
+  "P17509|molecular_function|GO:0000978": [
+    "P3_fewshot"
+  ],
+  "P17509|cellular_component|GO:0005654": [
+    "P3_fewshot"
+  ],
+  "P17509|cellular_component|GO:0000785": [
+    "P3_fewshot"
+  ],
+  "P17509|cellular_component|GO:0005634": [
+    "P3_fewshot"
+  ],
+  "Q2M1V0|cellular_component|GO:0005634": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "Q2M1V0|cellular_component|GO:0005654": [
+    "P3_fewshot"
+  ],
+  "Q2M1V0|cellular_component|GO:0000785": [
+    "P3_fewshot"
+  ],
+  "O15539|molecular_function|GO:0005096": [
+    "P1_zeroshot"
+  ],
+  "O15539|molecular_function|GO:0001965": [
+    "P1_zeroshot"
+  ],
+  "Q96KR4|molecular_function|GO:0004222": [
+    "P3_fewshot"
+  ],
+  "Q96KR4|molecular_function|GO:0008233": [
+    "P3_fewshot"
+  ],
+  "Q96KR4|molecular_function|GO:0008237": [
+    "P3_fewshot"
+  ],
+  "Q96KR4|molecular_function|GO:0008270": [
+    "P3_fewshot"
+  ],
+  "Q96KR4|molecular_function|GO:0046872": [
+    "P3_fewshot"
+  ],
+  "Q53ET0|cellular_component|GO:0005737": [
+    "P1_zeroshot"
+  ],
+  "Q53ET0|cellular_component|GO:0005634": [
+    "P1_zeroshot"
+  ],
+  "Q7Z6A9|cellular_component|GO:0009986": [
+    "P3_fewshot"
+  ],
+  "Q7Z6A9|cellular_component|GO:0005887": [
+    "P3_fewshot"
+  ],
+  "Q7Z6A9|cellular_component|GO:0005886": [
+    "P3_fewshot"
+  ],
+  "Q7Z6A9|cellular_component|GO:0009897": [
+    "P3_fewshot"
+  ],
+  "Q8K4H1|molecular_function|GO:0004061": [
+    "P2_constrained"
+  ],
+  "Q9WVM8|cellular_component|GO:0005759": [
+    "P1_zeroshot"
+  ],
+  "Q9WVM8|cellular_component|GO:0005739": [
+    "P1_zeroshot"
+  ],
+  "Q99LS3|cellular_component|GO:0005737": [
+    "P4_cot"
+  ],
+  "Q99LS3|cellular_component|GO:0005829": [
+    "P4_cot"
+  ],
+  "Q9D826|cellular_component|GO:0005777": [
+    "P1_zeroshot"
+  ],
+  "Q9D826|cellular_component|GO:0005782": [
+    "P1_zeroshot"
+  ],
+  "Q3T9E4|molecular_function|GO:0005515": [
+    "P3_fewshot"
+  ],
+  "Q3T9E4|molecular_function|GO:0003924": [
+    "P3_fewshot",
+    "P4_cot"
+  ],
+  "Q3T9E4|molecular_function|GO:0005525": [
+    "P3_fewshot",
+    "P4_cot"
+  ],
+  "O35690|cellular_component|GO:0005654": [
+    "P3_fewshot"
+  ],
+  "O35690|cellular_component|GO:0000785": [
+    "P3_fewshot"
+  ],
+  "O35690|cellular_component|GO:0005634": [
+    "P3_fewshot"
+  ],
+  "Q9EQ20|cellular_component|GO:0005759": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "Q9EQ20|cellular_component|GO:0005739": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "Q8BZH1|molecular_function|GO:0005509": [
+    "P1_zeroshot"
+  ],
+  "Q8BZH1|molecular_function|GO:0003810": [
+    "P1_zeroshot",
+    "P2_constrained"
+  ],
+  "Q7TRX1|molecular_function|GO:0004888": [
+    "P3_fewshot"
+  ],
+  "Q7TRX1|molecular_function|GO:0004984": [
+    "P3_fewshot"
+  ],
+  "Q7TRX1|molecular_function|GO:0005549": [
+    "P3_fewshot"
+  ],
+  "Q7TRX1|molecular_function|GO:0004930": [
+    "P3_fewshot"
+  ],
+  "P25378|molecular_function|GO:0003924": [
+    "P1_zeroshot",
+    "P4_cot"
+  ],
+  "P25378|molecular_function|GO:0005525": [
+    "P1_zeroshot",
+    "P4_cot"
+  ],
+  "Q03702|cellular_component|GO:0005759": [
+    "P3_fewshot"
+  ],
+  "Q03702|cellular_component|GO:0005739": [
+    "P3_fewshot"
+  ],
+  "Q03702|cellular_component|GO:0042645": [
+    "P3_fewshot"
+  ],
+  "P38289|cellular_component|GO:0005759": [
+    "P3_fewshot"
+  ],
+  "P38289|cellular_component|GO:0005739": [
+    "P3_fewshot"
+  ],
+  "P38289|cellular_component|GO:0042645": [
+    "P3_fewshot"
+  ],
+  "Q06098|molecular_function|GO:0005524": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "Q06098|molecular_function|GO:0004674": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "Q06098|molecular_function|GO:0016301": [
+    "P3_fewshot"
+  ],
+  "Q06098|molecular_function|GO:0004672": [
+    "P3_fewshot"
+  ],
+  "P00812|molecular_function|GO:0046872": [
+    "P3_fewshot"
+  ],
+  "P00812|molecular_function|GO:0004053": [
+    "P3_fewshot"
+  ],
+  "P00812|molecular_function|GO:0030145": [
+    "P3_fewshot"
+  ],
+  "Q3E7Y3|molecular_function|GO:0019843": [
+    "P3_fewshot"
+  ],
+  "Q3E7Y3|molecular_function|GO:0003723": [
+    "P3_fewshot"
+  ],
+  "Q3E7Y3|molecular_function|GO:0003735": [
+    "P3_fewshot"
+  ],
+  "P0CX31|molecular_function|GO:0003735": [
+    "P1_zeroshot"
+  ],
+  "P41902|molecular_function|GO:0005507": [
+    "P2_constrained",
+    "P3_fewshot"
+  ],
+  "P41902|molecular_function|GO:0046872": [
+    "P3_fewshot"
+  ],
+  "P07464|cellular_component|GO:0005737": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "P0A790|molecular_function|GO:0004068": [
+    "P1_zeroshot",
+    "P2_constrained"
+  ],
+  "P0A790|cellular_component|GO:0005829": [
+    "P2_constrained"
+  ],
+  "P29208|biological_process|GO:0009234": [
+    "P1_zeroshot"
+  ],
+  "P29208|cellular_component|GO:0005737": [
+    "P1_zeroshot",
+    "P2_constrained",
+    "P4_cot"
+  ],
+  "P77215|cellular_component|GO:0005737": [
+    "P1_zeroshot",
+    "P4_cot"
+  ],
+  "P77215|cellular_component|GO:0005829": [
+    "P4_cot"
+  ],
+  "P31551|cellular_component|GO:0005737": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "P13016|cellular_component|GO:0005737": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "P33221|cellular_component|GO:0005737": [
+    "P3_fewshot"
+  ],
+  "P33221|cellular_component|GO:0005829": [
+    "P3_fewshot"
+  ],
+  "P76145|cellular_component|GO:0005737": [
+    "P1_zeroshot",
+    "P3_fewshot"
+  ],
+  "P76145|cellular_component|GO:0005829": [
+    "P3_fewshot"
+  ],
+  "P69222|biological_process|GO:0006413": [
+    "P2_constrained"
+  ],
+  "P17443|molecular_function|GO:0008763": [
+    "P1_zeroshot"
+  ],
+  "P75713|cellular_component|GO:0005737": [
+    "P3_fewshot"
+  ],
+  "P18392|biological_process|GO:0007165": [
+    "P3_fewshot"
+  ],
+  "P18392|biological_process|GO:0000160": [
+    "P3_fewshot"
+  ],
+  "P18392|biological_process|GO:0006468": [
+    "P3_fewshot"
+  ],
+  "P18392|biological_process|GO:0046777": [
+    "P3_fewshot"
+  ]
+}

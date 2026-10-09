@@ -1,0 +1,17 @@
+# Manuscript source is released upon journal acceptance, not before.
+manuscript/
+
+# OS / editor junk
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets (defense in depth -- real keys are read from environment, never committed)
+.env
+*.env
+**/*api_key*
+**/*secret*
+**/*credential*

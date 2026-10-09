@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "pool_blastdb",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "RAGO pool (non-benchmark) proteins",
+  "number-of-letters": 15124748,
+  "number-of-sequences": 25460,
+  "last-updated": "2026-10-04T03:01:00",
+  "number-of-volumes": 1,
+  "bytes-total": 17691125,
+  "bytes-to-cache": 15354009,
+  "files": [
+    "pool_blastdb.pdb",
+    "pool_blastdb.phr",
+    "pool_blastdb.pin",
+    "pool_blastdb.pot",
+    "pool_blastdb.psq",
+    "pool_blastdb.ptf",
+    "pool_blastdb.pto"
+  ]
+}

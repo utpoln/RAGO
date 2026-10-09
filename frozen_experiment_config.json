@@ -1,0 +1,92 @@
+{
+  "frozen_date": "2026-10-06",
+  "design_name": "Design A (approved) -- natural population, no redraw, no distribution matching",
+  "primary_claim": "Does the frozen reliability framework generalize to previously unseen proteins drawn from the frozen eligibility population (Q1), not to a PROBE-distribution-matched population (Q2)?",
+  "primary_statistical_unit": "protein",
+  "primary_endpoint": "precision_at_10pct_coverage",
+  "secondary_endpoints": [
+    "per_protein_top1_precision",
+    "precision_at_1_5_20_50pct_coverage",
+    "leave_one_model_out_robustness",
+    "per_organism",
+    "per_namespace",
+    "calibration",
+    "dev_vs_heldout_comparison"
+  ],
+  "model_identities_mindrouter": [
+    "mistral-large:123b",
+    "qwen2.5:72b",
+    "google/gemma-4-31b",
+    "mixtral:8x7b",
+    "mistral:7b"
+  ],
+  "model_selection_rule": "ranks {1,3,5,7,9} of PROBE published Table 5 leaderboard (Mistral Large 123B, Qwen2.5 72B, Gemma-4 31B, Mixtral 8x7B, Mistral 7B) -- mechanical rule from already-published PROBE numbers, fixed before any held-out data was examined; leave-one-out verified no single model is load-bearing",
+  "prompts": [
+    "P1_zeroshot",
+    "P2_constrained",
+    "P3_fewshot",
+    "P4_cot"
+  ],
+  "prompts_excluded": [
+    "P5_selection"
+  ],
+  "p5_exclusion_reason": "P5 is a closed-set selection task (choose from a fixed, namespace-generic candidate list hardcoded in llm_prompting.py), structurally different from the open-ended generation of P1-P4; none of the three frozen score components (n_models, max_prompt_consistency, rago_support) use P5 data; omitting it changes nothing the framework uses",
+  "scoring_formula": "combined_score = n_models(0-5) + max_prompt_consistency(0-4) + 5*rago_support(0/1), range 0-14",
+  "blast_version": "blastp: 2.17.0+\n Package: blast 2.17.0, build Jul  1 2025 12:49:33",
+  "blast_params": {
+    "evalue": 1e-05,
+    "max_target_seqs": 50,
+    "top_k_hits": 10,
+    "top_k_terms": 15
+  },
+  "blast_database": "RAGO/pool_blastdb (built from ADAPT's 25,460-protein pool, pool_proteins.fasta) -- frozen, unchanged, verified zero overlap with held-out 243",
+  "blast_database_fasta_sha256_16": "4c8f673deed8102f",
+  "go_obo_release": "2026-03-25",
+  "go_obo_n_terms": 48321,
+  "go_obo_n_terms_note": "Corrected from a previously recorded 48,291 to the verified direct count of 48,321 '[Term]' stanzas (includes 10,058 obsolete terms). File hash is IDENTICAL before and after this correction (923645000afcb1df) -- the OBO file itself was never modified; this was a documentation bookkeeping correction only, not a data-integrity issue.",
+  "go_obo_sha256_16": "923645000afcb1df",
+  "evidence_codes_experimental": [
+    "IDA", "IMP", "IPI", "IGI", "IEP", "EXP", "HDA", "HMP", "HGI", "HEP"
+  ],
+  "eligibility_criterion": ">=3 total experimental GO terms (any namespace, pooled) AND non-empty UniProt FUNCTION comment; identical to the rule used to build the ADAPT pool being excluded; NOT changed after observing the held-out annotation-distribution shift",
+  "excluded_populations": "every accession in PROBE's 1,000-protein benchmark UNION ADAPT's 25,460-protein training pool -- verified zero overlap",
+  "N_final": 243,
+  "N_target_original": 250,
+  "organism_allocation": {
+    "human": 63,
+    "mouse": 63,
+    "yeast": 62,
+    "ecoli": 55
+  },
+  "ecoli_shortfall": "target was 62; entire fresh eligible E. coli pool (2,495 accessions) was exhaustively checked; only 55 qualified. Accepted as final per Design A -- NOT backfilled by relaxing the threshold, NOT backfilled by reallocating slots from another organism. Verified (via exclude-ecoli-entirely sensitivity check) that the shortfall is not the cause of the annotation-distribution shift (effect size unchanged: Cohen's d -0.646 with ecoli excluded vs -0.645 with ecoli included).",
+  "zebrafish_excluded_reason": "0% empirical yield in feasibility testing; eligible pool for zebrafish was already essentially exhausted by PROBE+ADAPT",
+  "sampling_seed": 42,
+  "sampling_procedure": "per organism: enumerate full current reviewed UniProt accession list -> exclude PROBE union ADAPT -> shuffle with random.Random(42) -> sequentially check qualification in that fixed order -> keep first N_target qualifiers (or all qualifiers if the pool is exhausted before reaching N_target, as occurred for E. coli). Already executed in full; the drawn set is FINAL -- no redraw, substitution, top-up, or rebalancing.",
+  "bootstrap_seed": 42,
+  "bootstrap_B_minimum": 1000,
+  "bootstrap_method": "resample N_heldout proteins with replacement from the 243 held-out proteins; pool all claims from resampled proteins; compute precision-at-10%-coverage on the pooled pseudo-sample; 95% CI = 2.5th/97.5th percentiles across B>=1000 replicates",
+  "total_calls": 14580,
+  "calls_formula": "243 proteins x 3 namespaces x 5 models x 4 prompts",
+  "calls_per_protein": 60,
+  "calls_per_model": 2916,
+  "calls_per_prompt": 3645,
+  "calls_per_organism": {
+    "human": 3780,
+    "mouse": 3780,
+    "yeast": 3720,
+    "ecoli": 3300
+  },
+  "no_retuning_statement": "No held-out result may be used to retune prompts, models, reliability score weights, BLAST thresholds, score thresholds, or eligibility criteria. A negative or weak held-out result is a valid scientific finding and will NOT trigger post-hoc tuning or a redraw.",
+  "open_world_annotation_limitation": "The held-out population has substantially sparser experimental GO annotation than PROBE's dev set, particularly for biological_process (BP presence 67.1% held-out vs 93.8% PROBE; Cohen's d=-0.623). Incomplete experimental ground truth can cause biologically correct but not-yet-curated predictions to be counted as false negatives in scoring. This is reported as a potential evaluation limitation, not a proven conservative bias. BP-specific secondary results are particularly susceptible; CC-specific results are the least affected (presence 88.5% held-out vs 75.8% PROBE).",
+  "script_hashes": {
+    "llm_prompting_rag.py": "85a69895dd90e7d1",
+    "draw_heldout_sample.py": "93c9a845183edaa1",
+    "evaluate_rag.py": "ec742218491c5b08",
+    "run_blast_retrieval.py": "5558fe1f32944056"
+  },
+  "scripts_not_yet_created": [
+    "heldout_query_proteins.fasta (raw sequences for the 243 held-out proteins -- required for BLAST retrieval, not required for P1-P4 LLM generation calls)",
+    "heldout_rag_candidates.json (BLAST retrieval output against the frozen pool_blastdb -- required to compute rago_support at scoring time)",
+    "scripts/llm_prompting_heldout.py (frozen copy of llm_prompting.py restricted to the 5 rule-models and P1-P4 only, pointed at the 243-protein held-out set)"
+  ]
+}

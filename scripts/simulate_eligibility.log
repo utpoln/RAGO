@@ -1,0 +1,47 @@
+=== human: fetching 800/9609 (sample, deterministic shuffle prefix) ===
+  ...200/800 fetched (51s elapsed)
+  ...400/800 fetched (111s elapsed)
+  ...600/800 fetched (173s elapsed)
+  ...800/800 fetched (232s elapsed)
+  Done: 800 valid entries fetched for human
+
+=== mouse: fetching 800/8717 (sample, deterministic shuffle prefix) ===
+  ...200/800 fetched (60s elapsed)
+  ...400/800 fetched (120s elapsed)
+  ...600/800 fetched (180s elapsed)
+  ...800/800 fetched (240s elapsed)
+  Done: 800 valid entries fetched for mouse
+
+=== yeast: fetching 2480/2480 (exhaustive) ===
+  ...200/2480 fetched (60s elapsed)
+  ...400/2480 fetched (119s elapsed)
+  ...600/2480 fetched (180s elapsed)
+  ...800/2480 fetched (244s elapsed)
+  ...1000/2480 fetched (304s elapsed)
+  ...1200/2480 fetched (376s elapsed)
+  ...1400/2480 fetched (436s elapsed)
+  ...1600/2480 fetched (496s elapsed)
+  ...1800/2480 fetched (1586s elapsed)
+  ...2000/2480 fetched (2579s elapsed)
+  ...2200/2480 fetched (4591s elapsed)
+  ...2400/2480 fetched (5646s elapsed)
+  ...2480/2480 fetched (6629s elapsed)
+  Done: 2480 valid entries fetched for yeast
+
+=== ecoli: fetching 2495/2495 (exhaustive) ===
+  ...200/2495 fetched (1022s elapsed)
+  ...400/2495 fetched (2979s elapsed)
+  ...600/2495 fetched (3564s elapsed)
+  ...800/2495 fetched (5535s elapsed)
+  ...1000/2495 fetched (5594s elapsed)
+  ...1200/2495 fetched (5654s elapsed)
+  ...1400/2495 fetched (5714s elapsed)
+  ...1600/2495 fetched (5774s elapsed)
+  ...1800/2495 fetched (5834s elapsed)
+  ...2000/2495 fetched (5894s elapsed)
+  ...2200/2495 fetched (5954s elapsed)
+  ...2400/2495 fetched (6021s elapsed)
+  ...2495/2495 fetched (6054s elapsed)
+  Done: 2495 valid entries fetched for ecoli
+
+Saved eligibility_simulation_raw.json

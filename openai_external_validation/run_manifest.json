@@ -1,0 +1,47 @@
+{
+  "experiment": "OpenAI external-model generalization stress-test (separate from frozen primary)",
+  "openai_model_id": "gpt-5.5-2026-04-23",
+  "model_selection_method": "Queried live /v1/models endpoint; user selected from 3 presented options due to genuine ambiguity",
+  "accession_set_source": "../scripts/heldout_sample_250.json (reused unmodified, 243 accessions)",
+  "prompt_ids": ["P1_zeroshot", "P2_constrained", "P3_fewshot", "P4_cot"],
+  "p5_status": "not present in source module (../scripts/llm_prompting_heldout.py) -- structurally impossible to invoke",
+  "namespaces": ["molecular_function", "biological_process", "cellular_component"],
+  "calls_planned": 2916,
+  "calls_planned_formula": "243 proteins x 3 namespaces x 4 prompts x 1 model",
+  "calls_successful": 2914,
+  "calls_failed": 2,
+  "retry_count": 0,
+  "retry_note": "The 2 failures ('Could not finish the message because max_tokens or model output limit was reached') are a structural consequence of this model consuming its entire completion-token budget on invisible reasoning tokens -- confirmed via a separate diagnostic probe (finish_reason='length', reasoning_tokens=512/512). This is NOT a transient infrastructure error, so retrying with identical parameters would fail again; no retry was attempted, per the instruction to report problems rather than silently adapt the experiment.",
+  "failed_calls": [
+    {"accession": "P46854", "namespace": "cellular_component", "prompt_id": "P3_fewshot", "error": "max_tokens or model output limit reached"},
+    {"accession": "P29208", "namespace": "cellular_component", "prompt_id": "P3_fewshot", "error": "max_tokens or model output limit reached"}
+  ],
+  "generation_parameters": {
+    "max_completion_tokens": 512,
+    "temperature": "not settable on this model (API rejects any value other than default=1)",
+    "top_p": "not set (API default)",
+    "seed": 42,
+    "system_message": "none"
+  },
+  "api_metadata_available": "response.id, response.model, response.system_fingerprint (observed as null for this model/endpoint), response.usage (prompt_tokens, completion_tokens); response.usage.completion_tokens_details.reasoning_tokens was NOT captured in the main run's logging (only discovered to be relevant via a post-hoc diagnostic probe) -- noted as a logging gap for any future repeat of this experiment.",
+  "code_version": {
+    "script": "openai_prompting_heldout.py",
+    "prompt_source_imported_from": "../scripts/llm_prompting_heldout.py (build_prompts function, imported directly, not retyped)"
+  },
+  "timestamps": {
+    "start_utc": "2026-10-08T00:34:18.412979+00:00",
+    "end_utc": "2026-10-08T07:42:48.620159+00:00"
+  },
+  "random_seed": 42,
+  "evaluation_code_version": "analysis/audit_and_analyze.py, analysis/final_analysis.py (this experiment's own analysis scripts; frozen primary analysis scripts were NOT modified or reused destructively -- frozen claim scores were read-only reconstructed from the unmodified heldout_results/*.jsonl files)",
+  "deviations_from_frozen_primary_methodology": [
+    "max_tokens parameter name changed to max_completion_tokens (required by this model's API; same numeric value, 512)",
+    "temperature could not be set to 0.0 (model only supports default=1) -- a genuine, disclosed deviation from the frozen generation config, not emulated",
+    "CRITICAL: the 512-token completion budget, appropriate for the 5 frozen non-reasoning models, caused 98.0% of successful calls (2,855/2,914) to return EMPTY visible content because this model consumed the entire budget on invisible reasoning tokens before producing any visible output (confirmed via diagnostic probe: finish_reason='length', reasoning_tokens=512/512 at budget=512; a probe at budget=4000 succeeded with reasoning_tokens=2,527). This was NOT discovered until after the full run completed, and per instructions was reported rather than silently fixed by increasing the budget and re-running."
+  ],
+  "frozen_primary_integrity_check": {
+    "method": "SHA-256 of all frozen primary files recorded before this experiment began and re-verified after completion",
+    "result": "IDENTICAL -- FROZEN_PROTOCOL.md, frozen_experiment_config.json, scripts/heldout_sample_250.json, scripts/heldout_draw_audit_log.json, scripts/llm_prompting_heldout.py, and all 5 heldout_results/*.jsonl + run_manifest.json are byte-for-byte unchanged",
+    "n_models_check": "Confirmed the OpenAI model's predictions were never incorporated into the 5-model n_models calculation -- the frozen claim score lookup used for comparison was reconstructed read-only from the unmodified 5 frozen result files only."
+  }
+}

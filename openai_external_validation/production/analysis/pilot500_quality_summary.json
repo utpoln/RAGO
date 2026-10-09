@@ -1,0 +1,21 @@
+{
+  "n": 500,
+  "api_fail": 0,
+  "finish_reasons": {
+    "stop": 500
+  },
+  "empty": 0,
+  "truncated": 0,
+  "go_bearing": 500,
+  "zero_go": 0,
+  "go_terms_mean": 3.426,
+  "go_terms_median": 3.0,
+  "input_tokens_mean": 274.532,
+  "cached_tokens_total": 0,
+  "reasoning_tokens_mean": 453.672,
+  "output_tokens_mean": 502.228,
+  "actual_cost_standard": 8.219750000000001,
+  "per_call_cost": 0.016439500000000003,
+  "projected_remaining_2416_standard": 39.71783200000001,
+  "projected_full_2916_standard": 47.937582000000006
+}

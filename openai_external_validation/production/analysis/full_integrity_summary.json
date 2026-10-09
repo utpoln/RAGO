@@ -1,0 +1,14 @@
+{
+  "total": 2916,
+  "api_fail": 0,
+  "finish_reasons": {
+    "stop": 2916
+  },
+  "parse_fail": 0,
+  "empty": 12,
+  "truncated": 0,
+  "go_bearing": 2903,
+  "zero_go": 1,
+  "cost_standard": 51.00390000000001,
+  "cost_batch_discount_assumed": 25.501950000000004
+}

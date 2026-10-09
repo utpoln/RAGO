@@ -1,0 +1,2 @@
+{"custom_id": "test-1", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "gpt-5.5-2026-04-23", "messages": [{"role": "user", "content": "Say OK."}], "max_completion_tokens": 512, "reasoning_effort": "low"}}
+{"custom_id": "test-2", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "gpt-5.5-2026-04-23", "messages": [{"role": "user", "content": "Say hello."}], "max_completion_tokens": 512, "reasoning_effort": "low"}}

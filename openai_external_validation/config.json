@@ -1,0 +1,50 @@
+{
+  "experiment_name": "OpenAI external-model generalization stress-test",
+  "status": "SEPARATE from the frozen five-model primary validation -- does not modify it",
+  "frozen_primary_reference": {
+    "protocol_file": "../FROZEN_PROTOCOL.md",
+    "config_file": "../frozen_experiment_config.json",
+    "held_out_set": "../scripts/heldout_sample_250.json",
+    "note": "These files are READ ONLY inputs to this experiment. Hashes of all frozen primary files were recorded before this run and will be re-verified after, to prove nothing was modified."
+  },
+  "scientific_question": "Do predictions from an unseen OpenAI model become more reliable when they agree with claims that receive higher scores under the pre-existing frozen five-model reliability framework? This is NOT a new benchmark of OpenAI models and NOT a new primary endpoint.",
+  "openai_model": {
+    "id": "gpt-5.5-2026-04-23",
+    "selection_rationale": "Most recent dated (non-aliased) stable flagship chat-completion snapshot available via /v1/models at run time; standard tier (not -pro/-mini/-nano, not a reasoning model), closest usage-pattern match to the 5 frozen models. Selected by the user after being presented with 3 options (gpt-5.5-2026-04-23, gpt-5-2025-08-07, o3-2025-04-16) due to genuine ambiguity in model choice.",
+    "api": "client.chat.completions.create (same API surface as the frozen 5-model experiment)"
+  },
+  "generation_parameters": {
+    "max_completion_tokens": 512,
+    "max_tokens_note": "The frozen experiment used max_tokens=512. This model REJECTS 'max_tokens' entirely (400 error: 'Unsupported parameter: max_tokens is not supported with this model. Use max_completion_tokens instead.'). max_completion_tokens=512 is used instead -- same numeric budget, renamed parameter, confirmed empirically before the run.",
+    "temperature": "NOT SET -- NOT SUPPORTED",
+    "temperature_note": "Empirically confirmed via a probe call: 'Unsupported value: temperature does not support 0.0 with this model. Only the default (1) value is supported.' The frozen experiment used temperature=0.0. This model does not allow overriding temperature at all. This is a genuine, disclosed deviation -- NOT emulated or worked around.",
+    "top_p": "NOT SET (left at API default)",
+    "top_p_note": "Confirmed via probe call that top_p is accepted by the API, but left unset to match the frozen script's convention of not overriding it, and because temperature cannot be controlled anyway.",
+    "seed": 42,
+    "seed_note": "Confirmed via a two-call reproducibility probe (identical prompt, identical seed) that this model DOES return identical output under a fixed seed, despite temperature being fixed at its default. This is the closest available approximation to 'deterministic/low-variance' for this model.",
+    "system_message": "none -- matches the frozen P1-P4 construction, where the full instruction is a single user-role message (no separate system role used anywhere in llm_prompting.py / llm_prompting_heldout.py)."
+  },
+  "prompts": {
+    "source_file": "../scripts/llm_prompting_heldout.py",
+    "source_function": "build_prompts()",
+    "reuse_method": "Imported directly via importlib from llm_prompting_heldout.py at run time -- NOT retyped or recreated -- to guarantee byte-identical P1-P4 prompt text and few-shot examples.",
+    "prompt_ids_used": ["P1_zeroshot", "P2_constrained", "P3_fewshot", "P4_cot"],
+    "p5_status": "P5_selection does not exist anywhere in llm_prompting_heldout.py (verified in the prior frozen-run preflight) -- structurally impossible to invoke from the imported function."
+  },
+  "held_out_set": {
+    "source_file": "../scripts/heldout_sample_250.json",
+    "n_proteins": 243,
+    "benchmark_json_used": "../heldout_benchmark_243.json",
+    "note": "Identical file already used for the frozen 5-model run; reused as-is, not modified or regenerated."
+  },
+  "planned_calls": "243 proteins x 3 namespaces x 4 prompts x 1 model = 2,916",
+  "namespaces": ["molecular_function", "biological_process", "cellular_component"],
+  "namespace_note": "The user's original instruction stated '243 x 4 = 972' calls, but the frozen P1-P4 prompts are namespace-specific (build_prompts(entry, namespace, ...)). This discrepancy was flagged and resolved by explicit user decision: the OpenAI run follows the SAME convention as the frozen 5-model experiment (243 x 3 namespaces x 4 prompts = 2,916 calls), producing namespace-labeled claims directly comparable to the existing pooled claim set.",
+  "output_structure": {
+    "raw": "raw/ -- one JSONL file, full API response records per call",
+    "parsed": "parsed/ -- parsed GO claims per call",
+    "analysis": "analysis/ -- derived tables (frozen-score-vs-correctness, overlap, organism/namespace breakdowns, bootstrap CIs)",
+    "logs": "logs/ -- run logs, including every failure and retry"
+  },
+  "no_leakage_commitment": "OpenAI results will not be used to select the model (already selected before any scientific call), tune the reliability score, change weights/thresholds/prompts, remove proteins, change the held-out cohort, alter the primary endpoint, or redefine correctness. Any problem found will be reported, not silently worked around by changing the above."
+}
