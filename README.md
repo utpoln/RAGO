@@ -91,9 +91,43 @@ RAGO/
 │   ├── production/                     # Production batch submission scripts
 │   └── pilot_cost_optimization/        # Pilot batch-cost study (preceding the full run)
 │
+├── external_validation/                # Four additional external-validation models
+│   ├── run_external_model.py           # Generic runner (reuses the frozen P1-P4 prompt builder)
+│   ├── analyze_external_model.py       # Generic integrity audit + analysis pipeline
+│   ├── qwen3_truncation_sensitivity.py # Qwen3 truncation-sensitivity analysis
+│   ├── combined_external_validation_summary.json
+│   ├── llama3_3_70b/                   # Llama 3.3 70B raw responses + analysis
+│   ├── qwen3_32b/                      # Qwen3 32B raw responses + analysis
+│   ├── gemma3_12b/                     # Gemma3 12B raw responses + analysis
+│   ├── gpt_oss_120b/                   # GPT-oss-120B raw responses + analysis
+│   └── command_a_111b/                 # Discontinued (pilot only, see DISCONTINUED.md)
+│
+├── reproducibility/                    # How to reproduce the analysis vs. regenerate responses
+│   ├── README.md
+│   └── ollama.md                       # Optional local-inference guidance (not required)
+│
 └── manuscript/                         # Manuscript source -- not included in this repository;
                                          # released upon journal acceptance (see note above)
 ```
+
+---
+
+## Documentation
+
+Every markdown document in this repository, linked from here:
+
+- [`FROZEN_PROTOCOL.md`](FROZEN_PROTOCOL.md) — the full frozen protocol for the primary five-model experiment (score definition, held-out eligibility rule, tie-handling rule, bootstrap procedure, timestamps)
+- **External model-family validation (GPT-5.5)**
+  - [`openai_external_validation/README.md`](openai_external_validation/README.md) — subfolder overview
+  - [`openai_external_validation/OPENAI_EXTERNAL_PROTOCOL.md`](openai_external_validation/OPENAI_EXTERNAL_PROTOCOL.md) — protocol for the GPT-5.5 stress test
+  - [`openai_external_validation/OPENAI_EXTERNAL_VALIDATION_REPORT.md`](openai_external_validation/OPENAI_EXTERNAL_VALIDATION_REPORT.md) — results report
+  - [`openai_external_validation/pilot_cost_optimization/PILOT_PROTOCOL.md`](openai_external_validation/pilot_cost_optimization/PILOT_PROTOCOL.md) — pilot batch-cost protocol
+  - [`openai_external_validation/pilot_cost_optimization/pilot_report.md`](openai_external_validation/pilot_cost_optimization/pilot_report.md) — pilot results
+- **Additional external-validation models**
+  - [`external_validation/command_a_111b/DISCONTINUED.md`](external_validation/command_a_111b/DISCONTINUED.md) — why the Cohere Command-A 111B run was discontinued after a technical pilot (never used as scientific data)
+- **Reproducibility**
+  - [`reproducibility/README.md`](reproducibility/README.md) — reproducing the analysis from released data vs. regenerating LLM responses, plus the full frozen-artifact index
+  - [`reproducibility/ollama.md`](reproducibility/ollama.md) — optional local-inference guidance (Ollama is not required; MindRouter is the backend actually used for every published result)
 
 ---
 

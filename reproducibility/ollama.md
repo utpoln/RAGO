@@ -2,10 +2,12 @@
 
 **This is an optional example, not a requirement.** The analysis in
 this repository is fully reproducible from the already-released raw
-LLM responses (see `reproducibility/README.md`, Section A) without
-running any inference at all. This document is only for a researcher
-who specifically wants to regenerate responses locally for a model
-Ollama can serve, as one example of a compatible local backend.
+LLM responses (see [README.md](README.md), Section A) without running
+any inference at all. This document is only for a researcher who
+specifically wants to regenerate responses locally for a model Ollama
+can serve, as one example of a compatible local backend.
+
+[← Back to reproducibility/README.md](README.md)
 
 **Ollama is not required**, and this document does not claim that
 using it will reproduce byte-identical responses to the ones released

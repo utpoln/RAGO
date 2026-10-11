@@ -51,7 +51,7 @@ section and in `FROZEN_PROTOCOL.md` / `frozen_experiment_config.json`.
   are backend-independent and documented in full below.
 - Another backend capable of serving a compatible implementation of a
   given model **may** be used instead, for models where that is
-  technically possible — see `ollama.md` for one such option. Responses
+  technically possible — see [ollama.md](ollama.md) for one such option. Responses
   regenerated from a different backend, software version, quantization,
   or decoding implementation are **not guaranteed to be byte-identical**
   to the responses released in this repository, even for the same
