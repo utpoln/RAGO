@@ -1,0 +1,227 @@
+{
+  "gpt55": {
+    "model": "GPT-5.5",
+    "family_vendor": "OpenAI (proprietary)",
+    "relationship": "previously completed external model-family validation",
+    "total_calls": 2916,
+    "total_claims": 4801,
+    "correct_claims": 561,
+    "overall_precision": 0.1169,
+    "overlap_n": 2410,
+    "overlap_pct": 50.2,
+    "score_ge9": {
+      "n": 636,
+      "c": 181,
+      "precision": 0.2846
+    },
+    "score_ge12": {
+      "n": 294,
+      "c": 99,
+      "precision": 0.3367
+    },
+    "score_ge14": {
+      "n": 113,
+      "c": 48,
+      "precision": 0.4248
+    },
+    "bootstrap_ge9_ci": null
+  },
+  "external_models": {
+    "llama3_3_70b": {
+      "model": "Llama 3.3 70B",
+      "relationship": "Llama (new family vs. frozen five)",
+      "total_calls": 2916,
+      "total_claims": 12658,
+      "correct_claims": 327,
+      "overall_precision": 0.0258,
+      "overlap_n": 3277,
+      "overlap_pct": 25.89,
+      "score_ge9": {
+        "cum_n": 578,
+        "cum_c": 145,
+        "cum_precision": 0.2509
+      },
+      "score_ge12": {
+        "cum_n": 267,
+        "cum_c": 81,
+        "cum_precision": 0.3034
+      },
+      "score_ge14": {
+        "cum_n": 113,
+        "cum_c": 42,
+        "cum_precision": 0.3717
+      },
+      "bootstrap_ge9": {
+        "point": 0.2508650519031142,
+        "ci_lo": 0.22047485278771614,
+        "ci_hi": 0.2821406680260458,
+        "n_proteins": 205,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge12": {
+        "point": 0.30337078651685395,
+        "ci_lo": 0.2509090909090909,
+        "ci_hi": 0.35656414746876575,
+        "n_proteins": 134,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge14": {
+        "point": 0.37168141592920356,
+        "ci_lo": 0.2857142857142857,
+        "ci_hi": 0.45798181358929,
+        "n_proteins": 86,
+        "B": 2000,
+        "seed": 42
+      }
+    },
+    "qwen3_32b": {
+      "model": "Qwen3 32B",
+      "relationship": "Qwen (new generation within a frozen family)",
+      "total_calls": 2916,
+      "total_claims": 13847,
+      "correct_claims": 312,
+      "overall_precision": 0.0225,
+      "overlap_n": 5265,
+      "overlap_pct": 38.02,
+      "score_ge9": {
+        "cum_n": 717,
+        "cum_c": 171,
+        "cum_precision": 0.2385
+      },
+      "score_ge12": {
+        "cum_n": 322,
+        "cum_c": 99,
+        "cum_precision": 0.3075
+      },
+      "score_ge14": {
+        "cum_n": 123,
+        "cum_c": 47,
+        "cum_precision": 0.3821
+      },
+      "bootstrap_ge9": {
+        "point": 0.2384937238493724,
+        "ci_lo": 0.21179428322558305,
+        "ci_hi": 0.2663819153881915,
+        "n_proteins": 215,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge12": {
+        "point": 0.30745341614906835,
+        "ci_lo": 0.2603153717627402,
+        "ci_hi": 0.35514872543235937,
+        "n_proteins": 142,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge14": {
+        "point": 0.3821138211382114,
+        "ci_lo": 0.3030175706646295,
+        "ci_hi": 0.4695782237086584,
+        "n_proteins": 93,
+        "B": 2000,
+        "seed": 42
+      }
+    },
+    "gemma3_12b": {
+      "model": "Gemma3 12B",
+      "relationship": "Gemma (new generation within a frozen family)",
+      "total_calls": 2916,
+      "total_claims": 12865,
+      "correct_claims": 155,
+      "overall_precision": 0.012,
+      "overlap_n": 2141,
+      "overlap_pct": 16.64,
+      "score_ge9": {
+        "cum_n": 400,
+        "cum_c": 98,
+        "cum_precision": 0.245
+      },
+      "score_ge12": {
+        "cum_n": 192,
+        "cum_c": 60,
+        "cum_precision": 0.3125
+      },
+      "score_ge14": {
+        "cum_n": 76,
+        "cum_c": 28,
+        "cum_precision": 0.3684
+      },
+      "bootstrap_ge9": {
+        "point": 0.245,
+        "ci_lo": 0.20489091921441588,
+        "ci_hi": 0.284247167561121,
+        "n_proteins": 183,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge12": {
+        "point": 0.3125,
+        "ci_lo": 0.2541436464088398,
+        "ci_hi": 0.37244897959183676,
+        "n_proteins": 106,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge14": {
+        "point": 0.3684210526315789,
+        "ci_lo": 0.2631578947368421,
+        "ci_hi": 0.47297297297297297,
+        "n_proteins": 59,
+        "B": 2000,
+        "seed": 42
+      }
+    },
+    "gpt_oss_120b": {
+      "model": "GPT-oss-120B",
+      "relationship": "OpenAI open-weight (same vendor as GPT-5.5, architecturally distinct)",
+      "total_calls": 2916,
+      "total_claims": 10533,
+      "correct_claims": 387,
+      "overall_precision": 0.0367,
+      "overlap_n": 4176,
+      "overlap_pct": 39.65,
+      "score_ge9": {
+        "cum_n": 694,
+        "cum_c": 176,
+        "cum_precision": 0.2536
+      },
+      "score_ge12": {
+        "cum_n": 312,
+        "cum_c": 98,
+        "cum_precision": 0.3141
+      },
+      "score_ge14": {
+        "cum_n": 120,
+        "cum_c": 48,
+        "cum_precision": 0.4
+      },
+      "bootstrap_ge9": {
+        "point": 0.25360230547550433,
+        "ci_lo": 0.22580533464391028,
+        "ci_hi": 0.2833138231493854,
+        "n_proteins": 214,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge12": {
+        "point": 0.3141025641025641,
+        "ci_lo": 0.26666666666666666,
+        "ci_hi": 0.36363636363636365,
+        "n_proteins": 142,
+        "B": 2000,
+        "seed": 42
+      },
+      "bootstrap_ge14": {
+        "point": 0.4,
+        "ci_lo": 0.3220265291083272,
+        "ci_hi": 0.4910753446115288,
+        "n_proteins": 92,
+        "B": 2000,
+        "seed": 42
+      }
+    }
+  }
+}

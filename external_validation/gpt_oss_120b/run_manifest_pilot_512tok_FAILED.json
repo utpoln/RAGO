@@ -1,0 +1,23 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "label": "gpt_oss_120b",
+  "pilot": true,
+  "base_url": "https://mindrouter.uidaho.edu/v1",
+  "n_proteins_this_invocation": 16,
+  "namespaces": [
+    "molecular_function",
+    "biological_process",
+    "cellular_component"
+  ],
+  "prompt_ids": [
+    "P1_zeroshot"
+  ],
+  "max_tokens": 512,
+  "temperature": 0.0,
+  "thinking_mode": false,
+  "sleep_sec": 0.4,
+  "prompt_sample_hash": "3098c27dff5fcdc8",
+  "output_file": "/Users/kallolnaha/Documents/mix_projects/mindrouter/RAGO/external_validation/gpt_oss_120b/openai_gpt-oss-120b_pilot.jsonl",
+  "generated_at": "2026-10-10T07:49:25.318398+00:00",
+  "frozen_score_note": "This script never computes or modifies n_models, max_prompt_consistency, rago_support, or the combined score. External model output is scored only by a separate, later, read-only analysis step against the existing frozen five-model claim set."
+}

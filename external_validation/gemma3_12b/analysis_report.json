@@ -1,0 +1,401 @@
+{
+  "label": "gemma3_12b",
+  "model_id": "gemma3:12b",
+  "integrity": {
+    "raw_lines": 2916,
+    "raw_successful": 2916,
+    "raw_failed": 0,
+    "duplicate_keys_in_raw_file": 0,
+    "duplicate_key_examples": {},
+    "unique_final_retained_records": 2916,
+    "expected_records": 2916,
+    "missing_records": 0,
+    "missing_examples": [],
+    "unexpected_records": 0,
+    "unexpected_examples": [],
+    "distinct_proteins_covered": 243,
+    "expected_proteins": 243,
+    "proteins_with_wrong_call_count": 0,
+    "prompt_ids_used": [
+      "P1_zeroshot",
+      "P2_constrained",
+      "P3_fewshot",
+      "P4_cot"
+    ],
+    "p5_present": false,
+    "finish_reason_distribution_final": {
+      "stop": 2914,
+      "null": 2
+    },
+    "truncated_responses_in_final_dataset": 0,
+    "truncation_retried_count": 0,
+    "truncation_replaced_count": 0,
+    "truncation_note": "This pipeline's resume logic (load_completed()) marks a key as done once ANY success=True record exists for it, regardless of finish_reason. A truncated-but-successful call is therefore never automatically retried -- identical convention to the frozen 5-model script and the already-completed GPT-5.5 script, neither of which retries on truncation either (only API exceptions, logged success=false, are retry-eligible). All truncated records were accepted as final on first attempt; 0 were retried, 0 were replaced.",
+    "unparseable_retained_records": 0
+  },
+  "claim_extraction": {
+    "raw_go_pattern_matches_all_calls": 18514,
+    "duplicate_go_ids_within_single_responses": 2917,
+    "final_deduplicated_distinct_claims": 12865,
+    "zero_claim_calls": 23,
+    "zero_claim_calls_pct": 0.79,
+    "claims_per_call_mean": 5.349,
+    "claims_per_call_median": 5.0,
+    "claims_per_protein_mean": 52.94,
+    "claims_by_namespace": {
+      "molecular_function": 3797,
+      "biological_process": 5317,
+      "cellular_component": 3751
+    },
+    "claims_by_organism": {
+      "human": 3539,
+      "mouse": 3558,
+      "yeast": 3009,
+      "ecoli": 2759
+    },
+    "distinct_proteins_with_any_claim": 243
+  },
+  "correctness": {
+    "total_claims": 12865,
+    "correct_claims": 155,
+    "overall_precision": 0.012,
+    "by_namespace": {
+      "molecular_function": {
+        "n": 3797,
+        "correct": 6,
+        "precision": 0.0016
+      },
+      "biological_process": {
+        "n": 5317,
+        "correct": 6,
+        "precision": 0.0011
+      },
+      "cellular_component": {
+        "n": 3751,
+        "correct": 143,
+        "precision": 0.0381
+      }
+    },
+    "by_organism": {
+      "human": {
+        "n": 3539,
+        "correct": 55,
+        "precision": 0.0155
+      },
+      "mouse": {
+        "n": 3558,
+        "correct": 33,
+        "precision": 0.0093
+      },
+      "yeast": {
+        "n": 3009,
+        "correct": 39,
+        "precision": 0.013
+      },
+      "ecoli": {
+        "n": 2759,
+        "correct": 28,
+        "precision": 0.0101
+      }
+    },
+    "open_world_note": "Y=0 means the GO term is not supported by currently available experimental annotations for that protein/namespace; it does NOT establish that the biological association is false."
+  },
+  "overlap": {
+    "total_external_claims": 12865,
+    "overlapping_frozen_claim_set": 2141,
+    "overlapping_pct": 16.64,
+    "external_model_only_claims": 10724,
+    "external_only_pct": 83.36,
+    "external_only_correct": 6,
+    "external_only_precision": 0.0006,
+    "note": "Only overlapping claims are assigned a frozen score (looked up, never computed from the external model's own output). External-only claims are reported descriptively and are never scored."
+  },
+  "score_correctness": {
+    "per_score": {
+      "2": {
+        "n": 632,
+        "c": 1,
+        "precision": 0.0016
+      },
+      "3": {
+        "n": 262,
+        "c": 2,
+        "precision": 0.0076
+      },
+      "4": {
+        "n": 222,
+        "c": 4,
+        "precision": 0.018
+      },
+      "5": {
+        "n": 179,
+        "c": 8,
+        "precision": 0.0447
+      },
+      "6": {
+        "n": 146,
+        "c": 7,
+        "precision": 0.0479
+      },
+      "7": {
+        "n": 158,
+        "c": 15,
+        "precision": 0.0949
+      },
+      "8": {
+        "n": 142,
+        "c": 14,
+        "precision": 0.0986
+      },
+      "9": {
+        "n": 148,
+        "c": 26,
+        "precision": 0.1757
+      },
+      "10": {
+        "n": 30,
+        "c": 6,
+        "precision": 0.2
+      },
+      "11": {
+        "n": 30,
+        "c": 6,
+        "precision": 0.2
+      },
+      "12": {
+        "n": 58,
+        "c": 19,
+        "precision": 0.3276
+      },
+      "13": {
+        "n": 58,
+        "c": 13,
+        "precision": 0.2241
+      },
+      "14": {
+        "n": 76,
+        "c": 28,
+        "precision": 0.3684
+      }
+    },
+    "cumulative_at_threshold": {
+      "14": {
+        "cum_n": 76,
+        "cum_c": 28,
+        "cum_precision": 0.3684
+      },
+      "13": {
+        "cum_n": 134,
+        "cum_c": 41,
+        "cum_precision": 0.306
+      },
+      "12": {
+        "cum_n": 192,
+        "cum_c": 60,
+        "cum_precision": 0.3125
+      },
+      "11": {
+        "cum_n": 222,
+        "cum_c": 66,
+        "cum_precision": 0.2973
+      },
+      "10": {
+        "cum_n": 252,
+        "cum_c": 72,
+        "cum_precision": 0.2857
+      },
+      "9": {
+        "cum_n": 400,
+        "cum_c": 98,
+        "cum_precision": 0.245
+      },
+      "8": {
+        "cum_n": 542,
+        "cum_c": 112,
+        "cum_precision": 0.2066
+      },
+      "7": {
+        "cum_n": 700,
+        "cum_c": 127,
+        "cum_precision": 0.1814
+      },
+      "6": {
+        "cum_n": 846,
+        "cum_c": 134,
+        "cum_precision": 0.1584
+      },
+      "5": {
+        "cum_n": 1025,
+        "cum_c": 142,
+        "cum_precision": 0.1385
+      },
+      "4": {
+        "cum_n": 1247,
+        "cum_c": 146,
+        "cum_precision": 0.1171
+      },
+      "3": {
+        "cum_n": 1509,
+        "cum_c": 148,
+        "cum_precision": 0.0981
+      },
+      "2": {
+        "cum_n": 2141,
+        "cum_c": 149,
+        "cum_precision": 0.0696
+      }
+    }
+  },
+  "bootstrap_by_threshold": {
+    "2": {
+      "point": 0.06959364782811771,
+      "ci_lo": 0.06020749943120665,
+      "ci_hi": 0.07967306936529768,
+      "n_proteins": 243,
+      "B": 2000,
+      "seed": 42
+    },
+    "3": {
+      "point": 0.09807819748177601,
+      "ci_lo": 0.08503299726265008,
+      "ci_hi": 0.11215655620261024,
+      "n_proteins": 243,
+      "B": 2000,
+      "seed": 42
+    },
+    "4": {
+      "point": 0.11708099438652766,
+      "ci_lo": 0.10167959079656327,
+      "ci_hi": 0.13367240428158103,
+      "n_proteins": 243,
+      "B": 2000,
+      "seed": 42
+    },
+    "5": {
+      "point": 0.13853658536585367,
+      "ci_lo": 0.12015416579370068,
+      "ci_hi": 0.15821038456909003,
+      "n_proteins": 240,
+      "B": 2000,
+      "seed": 42
+    },
+    "6": {
+      "point": 0.15839243498817968,
+      "ci_lo": 0.13625731623053822,
+      "ci_hi": 0.18236937452326468,
+      "n_proteins": 232,
+      "B": 2000,
+      "seed": 42
+    },
+    "7": {
+      "point": 0.18142857142857144,
+      "ci_lo": 0.15697529277112432,
+      "ci_hi": 0.20627001597304442,
+      "n_proteins": 229,
+      "B": 2000,
+      "seed": 42
+    },
+    "8": {
+      "point": 0.2066420664206642,
+      "ci_lo": 0.1743078088712467,
+      "ci_hi": 0.2411263647080934,
+      "n_proteins": 214,
+      "B": 2000,
+      "seed": 42
+    },
+    "9": {
+      "point": 0.245,
+      "ci_lo": 0.20489091921441588,
+      "ci_hi": 0.284247167561121,
+      "n_proteins": 183,
+      "B": 2000,
+      "seed": 42
+    },
+    "10": {
+      "point": 0.2857142857142857,
+      "ci_lo": 0.23937807555454613,
+      "ci_hi": 0.3388447041737266,
+      "n_proteins": 124,
+      "B": 2000,
+      "seed": 42
+    },
+    "11": {
+      "point": 0.2972972972972973,
+      "ci_lo": 0.24770535025293666,
+      "ci_hi": 0.35294792228818134,
+      "n_proteins": 117,
+      "B": 2000,
+      "seed": 42
+    },
+    "12": {
+      "point": 0.3125,
+      "ci_lo": 0.2541436464088398,
+      "ci_hi": 0.37244897959183676,
+      "n_proteins": 106,
+      "B": 2000,
+      "seed": 42
+    },
+    "13": {
+      "point": 0.30597014925373134,
+      "ci_lo": 0.23481668878566692,
+      "ci_hi": 0.38710245343025895,
+      "n_proteins": 90,
+      "B": 2000,
+      "seed": 42
+    },
+    "14": {
+      "point": 0.3684210526315789,
+      "ci_lo": 0.2631578947368421,
+      "ci_hi": 0.47297297297297297,
+      "n_proteins": 59,
+      "B": 2000,
+      "seed": 42
+    }
+  },
+  "overlap_organism_namespace": {
+    "organism": {
+      "human": {
+        "n": 620,
+        "correct": 54,
+        "precision": 0.0871,
+        "distinct_proteins": 63
+      },
+      "mouse": {
+        "n": 586,
+        "correct": 31,
+        "precision": 0.0529,
+        "distinct_proteins": 63
+      },
+      "yeast": {
+        "n": 538,
+        "correct": 38,
+        "precision": 0.0706,
+        "distinct_proteins": 62
+      },
+      "ecoli": {
+        "n": 397,
+        "correct": 26,
+        "precision": 0.0655,
+        "distinct_proteins": 55
+      }
+    },
+    "namespace": {
+      "molecular_function": {
+        "n": 743,
+        "correct": 5,
+        "precision": 0.0067
+      },
+      "biological_process": {
+        "n": 698,
+        "correct": 5,
+        "precision": 0.0072
+      },
+      "cellular_component": {
+        "n": 700,
+        "correct": 139,
+        "precision": 0.1986
+      }
+    },
+    "descriptive_note": "Descriptive breakdowns of the single external-validation comparison, not independent experiments."
+  }
+}

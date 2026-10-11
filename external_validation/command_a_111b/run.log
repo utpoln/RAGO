@@ -1,0 +1,12 @@
+Model               : command-a:111b
+Label               : command_a_111b  (FULL RUN)
+Proteins            : 243
+Namespaces          : ['molecular_function', 'biological_process', 'cellular_component']
+Prompts             : ['P1_zeroshot', 'P2_constrained', 'P3_fewshot', 'P4_cot']
+max_tokens          : 512   temperature: 0.0
+Thinking-model mode : False
+Total planned calls : 2,916
+Already completed   : 0 (resume)
+Output file         : /Users/kallolnaha/Documents/mix_projects/mindrouter/RAGO/external_validation/command_a_111b/command-a-111b.jsonl
+command_a_111b:command-a-111b:   0%|          | 0/2916 [00:00<?, ?it/s]command_a_111b:command-a-111b:   0%|          | 1/2916 [00:45<37:05:41, 45.81s/it]command_a_111b:command-a-111b:   0%|          | 2/2916 [00:52<18:33:34, 22.93s/it]command_a_111b:command-a-111b:   0%|          | 3/2916 [01:33<25:07:43, 31.06s/it]command_a_111b:command-a-111b:   0%|          | 4/2916 [02:54<41:13:02, 50.96s/it]command_a_111b:command-a-111b:   0%|          | 5/2916 [03:37<38:44:33, 47.91s/it]command_a_111b:command-a-111b:   0%|          | 6/2916 [03:45<27:42:39, 34.28s/it]command_a_111b:command-a-111b:   0%|          | 7/2916 [04:15<26:38:27, 32.97s/it]command_a_111b:command-a-111b:   0%|          | 8/2916 [05:10<32:16:26, 39.95s/it]/Users/kallolnaha/opt/anaconda3/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

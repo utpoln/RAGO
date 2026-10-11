@@ -1,0 +1,26 @@
+{
+  "model": "gemma3:12b",
+  "label": "gemma3_12b",
+  "pilot": false,
+  "base_url": "https://mindrouter.uidaho.edu/v1",
+  "n_proteins_this_invocation": 243,
+  "namespaces": [
+    "molecular_function",
+    "biological_process",
+    "cellular_component"
+  ],
+  "prompt_ids": [
+    "P1_zeroshot",
+    "P2_constrained",
+    "P3_fewshot",
+    "P4_cot"
+  ],
+  "max_tokens": 512,
+  "temperature": 0.0,
+  "thinking_mode": false,
+  "sleep_sec": 0.4,
+  "prompt_sample_hash": "f01b4202a84f28b4",
+  "output_file": "/Users/kallolnaha/Documents/mix_projects/mindrouter/RAGO/external_validation/gemma3_12b/gemma3-12b.jsonl",
+  "generated_at": "2026-10-10T15:29:58.732537+00:00",
+  "frozen_score_note": "This script never computes or modifies n_models, max_prompt_consistency, rago_support, or the combined score. External model output is scored only by a separate, later, read-only analysis step against the existing frozen five-model claim set."
+}

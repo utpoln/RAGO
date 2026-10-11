@@ -1,0 +1,140 @@
+{
+  "part1_truncated_characterization": {
+    "n_truncated_responses": 404,
+    "n_with_at_least_one_go_term": 404,
+    "n_with_zero_go_terms": 0,
+    "deduplicated_claims_from_truncated_responses": 5032,
+    "correct_claims_from_truncated_responses": 71,
+    "descriptive_precision_truncated_origin_claims": 0.0141,
+    "truncated_claims_overlapping_frozen_set": 1730,
+    "truncated_claims_overlap_pct": 34.38,
+    "truncated_overlapping_claims_by_score": {
+      "2": 599,
+      "3": 260,
+      "4": 196,
+      "5": 172,
+      "6": 106,
+      "7": 116,
+      "8": 107,
+      "9": 70,
+      "10": 12,
+      "11": 14,
+      "12": 26,
+      "13": 19,
+      "14": 33
+    },
+    "truncated_overlapping_claims_ge9": 174,
+    "truncated_overlapping_claims_ge12": 78,
+    "truncated_overlapping_claims_ge14": 33
+  },
+  "part7_token_inspection": {
+    "truncated_completion_tokens": {
+      "min": 512,
+      "max": 512,
+      "mean": 512.0,
+      "median": 512.0
+    },
+    "non_truncated_completion_tokens": {
+      "min": 13,
+      "max": 512,
+      "mean": 265.4,
+      "median": 282.0
+    },
+    "max_tokens_budget": 512,
+    "note": "Qwen3-32B is a reasoning model; extract_response_content() already strips <think>...</think> blocks and falls back to reasoning_content when content is empty, identically to the frozen pipeline's established handling. n_with_zero_go_terms among truncated responses indicates the cutoff landed before any GO term was emitted (reasoning likely consumed the full budget); n_with_at_least_one_go_term indicates at least partial answer content survived."
+  },
+  "part7_samples": [
+    {
+      "accession": "Q5JTH9",
+      "namespace": "biological_process",
+      "prompt_id": "P1_zeroshot",
+      "completion_tokens": 512,
+      "has_go_term": true,
+      "tail_200_chars": " helps prepare pre-40S particles for nuclear export, which is a form of RNA localization.*\n\n10. **GO:0006398 | RNA transport**  \n    *The nuclear export of pre-40S particles is a form of RNA transport"
+    },
+    {
+      "accession": "P31513",
+      "namespace": "biological_process",
+      "prompt_id": "P1_zeroshot",
+      "completion_tokens": 512,
+      "has_go_term": true,
+      "tail_200_chars": "cific to the biosynthesis of TMAO, a key function of FMO3.)*\n\n11. **GO:0006772 | regulation of platelet activation**  \n    *(FMO3 influences platelet function through TMAO regulation.)*\n\n12. **GO:0006"
+    },
+    {
+      "accession": "P31513",
+      "namespace": "biological_process",
+      "prompt_id": "P3_fewshot",
+      "completion_tokens": 512,
+      "has_go_term": true,
+      "tail_200_chars": "0008207 | regulation of vascular permeability** *(potential downstream effect of TMAO)*  \n- **GO:0008208 | regulation of lipid metabolic process** *(TMAO may influence lipid metabolism)*  \n- **GO:0008"
+    }
+  ],
+  "datasetA_full_2916": {
+    "claims": 13847,
+    "correct": 312,
+    "overall_precision": 0.0225,
+    "overlap_n": 5265,
+    "score_ge9": 0.2385,
+    "score_ge12": 0.3075,
+    "score_ge14": 0.3821,
+    "bootstrap_ge9": {
+      "point": 0.2384937238493724,
+      "ci_lo": 0.21179428322558305,
+      "ci_hi": 0.2663819153881915,
+      "n_proteins": 215,
+      "B": 2000,
+      "seed": 42
+    },
+    "bootstrap_ge12": {
+      "point": 0.30745341614906835,
+      "ci_lo": 0.2603153717627402,
+      "ci_hi": 0.35514872543235937,
+      "n_proteins": 142,
+      "B": 2000,
+      "seed": 42
+    },
+    "bootstrap_ge14": {
+      "point": 0.3821138211382114,
+      "ci_lo": 0.3030175706646295,
+      "ci_hi": 0.4695782237086584,
+      "n_proteins": 93,
+      "B": 2000,
+      "seed": 42
+    }
+  },
+  "datasetB_exclude_404_truncated": {
+    "claims": 10049,
+    "correct": 301,
+    "overall_precision": 0.03,
+    "overlap_n": 4339,
+    "score_ge9": 0.2439,
+    "score_ge12": 0.3109,
+    "score_ge14": 0.3917,
+    "bootstrap_ge9": {
+      "point": 0.24386724386724387,
+      "ci_lo": 0.2177111123999536,
+      "ci_hi": 0.2728847662119668,
+      "n_proteins": 214
+    },
+    "bootstrap_ge12": {
+      "point": 0.3108974358974359,
+      "ci_lo": 0.26498164526062795,
+      "ci_hi": 0.3589805825242718,
+      "n_proteins": 138
+    },
+    "bootstrap_ge14": {
+      "point": 0.39166666666666666,
+      "ci_lo": 0.3089278455284553,
+      "ci_hi": 0.4857273918741808,
+      "n_proteins": 92
+    }
+  },
+  "comparison": {
+    "claims_diff": -3798,
+    "correct_diff": -11,
+    "overall_precision_diff_pp": 0.0075,
+    "score_ge9_diff_pp": 0.0054,
+    "score_ge12_diff_pp": 0.0034,
+    "score_ge14_diff_pp": 0.0096
+  }
+}
